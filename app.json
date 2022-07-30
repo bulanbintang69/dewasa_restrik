@@ -1,0 +1,80 @@
+{
+  "name": "TG File Share/Sharing Bot",
+  "description": "file sharing bot store posts and it can access by special links",
+  "keywords": [
+    "telegram",
+    "file",
+    "sharing"
+  ],
+  "repository": "https://github.com/CodeXBotz/File-Sharing-Bot",
+  "logo": "https://telegra.ph/file/14d3013fda21281c54b61.jpg",
+  "env": {
+    "TG_BOT_TOKEN": {
+      "description": "Your Bot token, Get it from @Botfather",
+      "value": "5081560534:AAHd97RC0w7NM08Y5ON-2GA61GZ7CM9yFAo"
+    },
+    "OWNER_ID": {
+      "description": "An integer of consisting of your owner ID",
+      "value": "1747137573"
+    },
+    "APP_ID":{
+      "description": "your app id, take it from my.telegram.org",
+      "value": "7849221"
+    },
+    "API_HASH":{
+      "description": "your api hash, take it from my.telegram.org",
+      "value": "ef483846c6ad56e52008e9e569c4a3b8"
+    },
+    "CHANNEL_ID":{
+      "description": "make a channel (database channel), then make the bot as admin in channel, and it's id",
+      "value": "-1001424477540"
+    },
+    "FORCE_SUB_CHANNEL":{
+      "description": "id of the channel or group, if you want enable force sub feature else put 0",
+      "value": "-1001538557133"
+    },
+    "START_MESSAGE": {
+      "description": "Optional: start message of bot, use HTML parsemode format",
+      "value": "ᴛᴇʀɪᴍᴀᴋᴀꜱɪʜ {first} ᴛᴇʟᴀʜ ᴍᴇɴɢɢᴜᴋᴀɴ ʙᴏᴛ ᴋᴀᴍɪ."
+    },
+    "FORCE_SUB_MESSAGE": {
+      "description": "Optional: Force Sub message of bot, use HTML parsemode format",
+      "value": "𝐓𝐮𝐭𝐨𝐫𝐢𝐚𝐥 :\n➥ 1. Start Bot,\n➥ 2. Join Channel (wajib),\n➥ 3. Join Group (tidak wajib),\n➥ 4. Klik 📂ɢᴇᴛ ꜰɪʟᴇ📂,\n➥ 5. Tunggu hingga File nya Muncul.\n\n<b>○Tutorial lengkap :  <a href='https://t.me/Anime_Bahasa_Indonesia/185'>Klik Disini!</a><b>"
+    },
+    "ADMINS": {
+      "description": "A space separated list of user_ids of Admins, they can only create links",
+      "value": "1747137573",
+      "required": false
+    },
+    "PROTECT_CONTENT": {
+      "description": "Protect contents from getting forwarded",
+      "value": "True",
+      "required": false
+    }, 
+    "LINK_CH": {
+      "description": "Protect contents from getting forwarded",
+      "value": "group_anime_Indonesia",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+    "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
+
