@@ -90,8 +90,7 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🍑 ᴍʏ ᴄʜᴀɴɴᴇʟ", url = client.invitelink),
-                    InlineKeyboardButton("🍑 ᴍʏ ɢʀᴏᴜᴘ", url = f"https://t.me/{LINK_CH}")
+                    InlineKeyboardButton("🍑 ᴍʏ ᴄʜᴀɴɴᴇʟ", url = client.invitelink)
                 ],
                 [
                     InlineKeyboardButton("✖️ ᴄʟᴏꜱᴇ", callback_data = "close")
@@ -117,9 +116,6 @@ async def not_joined(client: Client, message: Message):
     buttons = [
         [
             InlineKeyboardButton("🍑 ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url = client.invitelink)
-        ], 
-        [
-            InlineKeyboardButton("🍑 ᴊᴏɪɴ ɢʀᴏᴜᴘ", url = f"https://t.me/{LINK_CH}")
         ]
     ]
     try:
