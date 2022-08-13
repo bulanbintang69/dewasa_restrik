@@ -26,7 +26,16 @@ async def channel_post(client: Client, message: Message):
     base64_string = await encode(string)
     link = f"https://t.me/{client.username}?start={base64_string}"
 
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
+    reply_markup = InlineKeyboardMarkup(
+        [
+          [
+              InlineKeyboardButton("bagian 1", url=f'https://telegram.me/share/url?url={link}')
+          ],
+          [
+              InlineKeyboardButton("bagian 2", url=f'https://telegram.me/share/url?url={link}')
+          ]
+        ]
+    )
 
     await reply_text.edit(f"<b>ꜱɪʟᴀʜᴋᴀɴ ᴋʟɪᴋ ʟɪɴᴋ ᴅɪʙᴀᴡᴀʜ</b>🔽\n\n{link}", reply_markup=reply_markup, disable_web_page_preview = True)
 
@@ -43,7 +52,16 @@ async def new_post(client: Client, message: Message):
     string = f"get-{converted_id}"
     base64_string = await encode(string)
     link = f"https://t.me/{client.username}?start={base64_string}"
-    reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("🔁 Share URL", url=f'https://telegram.me/share/url?url={link}')]])
+    reply_markup = InlineKeyboardMarkup(
+        [
+          [
+              InlineKeyboardButton("bagian 3", url=f'https://telegram.me/share/url?url={link}')
+          ],
+          [
+              InlineKeyboardButton("bagian 4", url=f'https://telegram.me/share/url?url={link}')
+          ]
+        ]
+    )
     try:
         await message.edit_reply_markup(reply_markup)
     except Exception as e:
