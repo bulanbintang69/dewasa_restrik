@@ -29,11 +29,13 @@ async def channel_post(client: Client, message: Message):
     reply_markup = InlineKeyboardMarkup(
         [
           [
-              InlineKeyboardButton("bagian 1", url=f'https://telegram.me/share/url?url={link}')
-          ],
+              InlineKeyboardButton("BOOBS", url=f'https://telegram.me/share/url?url={link}'), 
+              InlineKeyboardButton("VAGINA", url=f'https://telegram.me/share/url?url={link}')
+          ], 
           [
-              InlineKeyboardButton("bagian 2", url=f'https://telegram.me/share/url?url={link}')
-          ]
+              InlineKeyboardButton("HENTAI", url=f'https://telegram.me/share/url?url={link}'), 
+              InlineKeyboardButton("ASIA", url=f'https://telegram.me/share/url?url={link}')
+          ],
         ]
     )
 
